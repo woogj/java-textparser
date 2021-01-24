@@ -20,7 +20,7 @@ public class DOMParser {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = factory.newDocumentBuilder();
-			Document document = documentBuilder.parse("./conf/information.xml");
+			Document document = documentBuilder.parse("./java-textparser/conf/information.xml");
 			Element root = document.getDocumentElement();
 			filename = root.getAttribute("name");
 		} catch (ParserConfigurationException pce) {

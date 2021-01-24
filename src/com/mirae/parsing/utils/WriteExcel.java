@@ -57,7 +57,7 @@ public class WriteExcel {
 			}
 		}
 		try {
-			FileOutputStream fos = new FileOutputStream(".\\output\\"+filename+".xlsx");
+			FileOutputStream fos = new FileOutputStream("./output/"+filename+".xlsx");
 			workbook.write(fos);
 			fos.close();
 		} catch (FileNotFoundException fnfe) {
@@ -109,7 +109,8 @@ public class WriteExcel {
 			}
 		}
 		try {
-			FileOutputStream fos = new FileOutputStream(".\\output\\"+filename+".xlsx");
+
+			FileOutputStream fos = new FileOutputStream("./output/"+filename+".xlsx");
 			workbook.write(fos);
 			fos.close();
 		} catch (FileNotFoundException fnfe) {
@@ -123,7 +124,6 @@ public class WriteExcel {
 	}
 	
 	public static void exportExcel(ArrayList<ArrayList<String>> sentences, String filename) {
-//		public static void exportExcel(String[] excelFile, ArrayList<ArrayList<String>> senteces, String filename) {
 		Charset.forName("MS949");
 		Workbook workbook = new XSSFWorkbook();
 		Sheet sheet = workbook.createSheet("sheet1");
@@ -141,7 +141,7 @@ public class WriteExcel {
 			}
 		}
 		try {
-			FileOutputStream fos = new FileOutputStream(".\\output\\"+filename+".xlsx");
+			FileOutputStream fos = new FileOutputStream("./output/"+filename+".xlsx");
 			workbook.write(fos);
 			fos.close();
 		} catch (FileNotFoundException fnfe) {
@@ -154,7 +154,6 @@ public class WriteExcel {
 		System.out.println("@@ Exported Excel File: "+filename+".xlsx");
 	}
 	public static void exportExcel_test(ArrayList<String[]> sentences, String filename) {
-//		public static void exportExcel(String[] excelFile, ArrayList<ArrayList<String>> senteces, String filename) {
 		Charset.forName("MS949");
 		Workbook workbook = new XSSFWorkbook();
 		Sheet sheet = workbook.createSheet("sheet1");
@@ -172,7 +171,7 @@ public class WriteExcel {
 			}
 		}
 		try {
-			FileOutputStream fos = new FileOutputStream(".\\output\\"+filename+".xlsx");
+			FileOutputStream fos = new FileOutputStream("./output/"+filename+".xlsx");
 			workbook.write(fos);
 			fos.close();
 		} catch (FileNotFoundException fnfe) {

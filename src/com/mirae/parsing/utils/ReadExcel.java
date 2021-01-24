@@ -28,7 +28,7 @@ public class ReadExcel {
 		String[] excelData = {};
 		try {
 			Charset.forName("MS949");
-			FileInputStream fis = new FileInputStream(".\\input\\"+filename+".xlsx");
+			FileInputStream fis = new FileInputStream("./input/"+filename+".xlsx");
 			Workbook workbook = WorkbookFactory.create(fis);
 			int rowIndex = 0;
 			Sheet sheet = workbook.getSheetAt(0);
@@ -64,7 +64,7 @@ public class ReadExcel {
 		ArrayList<String[]> rs = new ArrayList<>();
 		try {
 			Charset.forName("MS949");
-			FileInputStream fis = new FileInputStream(".\\input\\"+filename+".xlsx");
+			FileInputStream fis = new FileInputStream("./input/"+filename+".xlsx");
 			Workbook workbook = WorkbookFactory.create(fis);
 			int rowIndex = 0;
 			Sheet sheet = workbook.getSheetAt(0);

@@ -38,10 +38,10 @@ public class ParsingExcel {
         for(ArrayList<String> Index: setences) {
             rsSetences.add(GetRefined.Reattach(GetRefined.confirmSentence(GetBreakIterator.printEachForward(boundary, Index))));
         }
-        log.debug("TextParsing terminated- total text: "+rsSetences.size()+", total sentences: "+ getObjectSize.getSizeObj(rsSetences));
+
 
         WriteExcel.exportExcel(no, excelFile, rsSetences, filename+"_parsed"+forExcel.format(date));
         endTm = System.currentTimeMillis();
-        log.debug(String.format("@@ TextParsing Terminated- %s (%s)", getObjectSize.getSize(rsSetences), forLog.format(endTm-startTm)));
+        log.debug("TextParsing terminated- total text: "+rsSetences.size()+", total sentences: "+ getObjectSize.getSizeObj(rsSetences)+"- %s",forLog.format(endTm-startTm));
     }
 }
