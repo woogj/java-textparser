@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.regex.MatchResult;
 
 public class TextParsingMain {
 	private static Logger log = LoggerFactory.getLogger(TextParsingMain.class);

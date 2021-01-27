@@ -104,6 +104,25 @@ public class GetRefined {
 		}
 		return rsList;
 	}
+
+	// 구문 입력 시 cropLine 메소드 210123
+	public static ArrayList<String> cropLine(String construction){
+		ArrayList<String> rsList = new ArrayList<>();
+		if(construction != null) {
+			construction += "\n";
+			String regex = ".*[\r\n]";
+			Pattern p = Pattern.compile(regex);
+			Matcher m = p.matcher(construction);
+			while(m.find()) {
+				String tmpStr = m.group(0);
+				tmpStr = tmpStr.trim();
+				if(!tmpStr.isEmpty()) {
+					rsList.add(tmpStr);
+				}
+			}
+		}
+		return rsList;
+	}
 	
 	public static ArrayList<String> removeLine(String[] excelFile) {
 		ArrayList<String> sentences = new ArrayList<>();
